@@ -1,6 +1,6 @@
 var usedGroups = []; //global
 
-function generateCards(boardType){
+function generateCards(boardType, difficulty="standard"){
     usedGroups = [];
 
     var easy = objectiveData.filter(e => e.difficulty == 1);
@@ -34,7 +34,16 @@ function generateCards(boardType){
         "fixed", "easy", "fixed", "easy", "fixed"   //rank 1
     ];
 
-    var houseDifficulty = houseDifficultyHard
+    var houseDifficulty = houseDifficultyEasy;
+    switch (difficulty) {
+        case "standard":
+            houseDifficulty = houseDifficultyEasy;
+            break;
+        case "hard":
+            houseDifficulty = houseDifficultyHard;
+            break;
+    }
+    
 
     var newBoard = [];
     newBoard[40] = "Open West Gate";

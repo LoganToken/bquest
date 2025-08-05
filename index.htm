@@ -151,6 +151,7 @@
                 <div class="col-lg-4 mb-3">
                     <h2>B Quest: Two Boards</h2>
                     <input type="button" class="form-control btn btn-lg btn-primary py-4 mb-3 shadow" value="Build Boards" onclick="buildBoards()">
+                    <input type="button" class="form-control btn btn-lg btn-primary py-4 mb-3 shadow" value="Build Hard Boards" onclick="buildBoards(difficulty='hard')">
                     <p>
                         Press this to create two JSON arrays and create two BingoSync "Custom (Advanced)" boards set to "Non-Lockout".
                     </p>
@@ -229,8 +230,8 @@
             }
         })
 
-        function buildBoards(){
-            var output = generateCards("bingosync");
+        function buildBoards(difficulty="standard"){
+            var output = generateCards("bingosync", difficulty);
             $("#board1").val(output[0]);
             $("#board2").val(output[1]);
         }
