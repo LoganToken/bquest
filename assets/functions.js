@@ -7,8 +7,10 @@ function generateCards(boardType){
     var med = objectiveData.filter(e => e.difficulty == 2);
     var hard = objectiveData.filter(e => e.difficulty == 3);
     var vhard = objectiveData.filter(e => e.difficulty == 4);
+    var insane = objectiveData.filter(e => e.difficulty == 5);
+    var impossible = objectiveData.filter(e => e.difficulty == 6);
 
-    var houseDifficulty = [
+    var houseDifficultyEasy = [
         "hard", "vhard", "fixed", "vhard", "hard",  //rank 9
         "hard", "hard", "vhard", "hard", "hard",    //rank 8
         "hard", "hard", "hard", "hard", "hard",     //rank 7
@@ -19,6 +21,20 @@ function generateCards(boardType){
         "easy", "easy", "med", "easy", "easy",      //rank 2
         "fixed", "easy", "fixed", "easy", "fixed"   //rank 1
     ];
+    
+    var houseDifficultyHard = [
+        "vhard", "insane", "fixed", "insane", "vhard",  //rank 9
+        "insane", "insane", "impossible", "insane", "insane",    //rank 8
+        "vhard", "vhard", "insane", "vhard", "vhard",     //rank 7
+        "hard", "hard", "vhard", "hard", "hard",       //rank 6
+        "med", "hard", "hard", "hard", "med",         //rank 5
+        "med", "med", "hard", "med", "med",          //rank 4
+        "easy", "med", "med", "med", "easy",        //rank 3
+        "easy", "easy", "med", "easy", "easy",      //rank 2
+        "fixed", "easy", "fixed", "easy", "fixed"   //rank 1
+    ];
+
+    var houseDifficulty = houseDifficultyHard
 
     var newBoard = [];
     newBoard[40] = "Open West Gate";
@@ -52,6 +68,12 @@ function generateCards(boardType){
                 break;
             case "vhard":
                 newBoard[currentSquare] = drawCard(vhard);
+                break;
+            case "insane":
+                newBoard[currentSquare] = drawCard(insane);
+                break;
+            case "impossible":
+                newBoard[currentSquare] = drawCard(impossible);
                 break;
             default:
                 break;
