@@ -18,7 +18,6 @@ var objectiveData = [
 {"name": "Permanently Increase a Room's Rarity", "difficulty": 2},
 {"name": "Re-roll a Draft 4+ Times", "difficulty": 2},
 {"name": "Open a Delivered Package", "difficulty": 2},
-{"name": "Reach Rank 9", "difficulty": 2},
 {"name": "Shelter the Lavatory", "difficulty": 2},
 {"name": "Eat in Pantry, Kitchen, and Dining in a Day", "difficulty": 2},
 {"name": "Draft 8 Blue Rooms in a Row", "difficulty": 2},
@@ -41,20 +40,17 @@ var objectiveData = [
 {"name": "End with 35+ Rooms", "difficulty": 3},
 
 // ungrouped very hard
-{"name": "Enter Antechamber", "difficulty": 4},
-{"name": "Gain Chess Power", "difficulty": 4},
+{"name": "Gain Chess Power", "difficulty": 5}, // difficulty 4 -> 5
 
 // ungrouped mine
 {"name": "Any Trophy", "difficulty": 6},
 {"name": "Read the Monk's Riddle", "difficulty": 6},
 {"name": "Room 46", "difficulty": 6},
 {"name": "Open a Filing Cabinet", "difficulty": 3},
-{"name": "Open a Vault Door", "difficulty": 5},
+{"name": "Open a Vault Door", "difficulty": 5}, // Ash objects
 {"name": "Operate a Powered Device", "difficulty": 3}, // Lab, Pump, Garage, Laundry, Furnace
 {"name": "Draft a Visible Room from Dark Room", "difficulty": 2},
 {"name": "Purchase a Book", "difficulty": 4},
-{"name": "Unlock a Basement Door", "difficulty": 5},
-{"name": "Pull a Backup Lever", "difficulty": 5}, // Weight Room, Throne Room, Secret Garden or Mechanarium
 {"name": "Purchase a Book", "difficulty": 3},
 {"name": "Purchase an Item from the Showroom", "difficulty": 4},
 {"name": "Start a Day with 4+ Gems", "difficulty": 3},
@@ -67,7 +63,6 @@ var objectiveData = [
 {"name": "Draft Maid's Chambers and Servant's Quarters in a Day", "difficulty": 3},
 {"name": "Draft 3 Tunnels in a row", "difficulty": 5},
 {"name": "Draw a Spoiled Room", "difficulty": 3},
-{"name": "Reach Rank 9 Without Drafting a Hallway", "difficulty": 3},
 {"name": "Unlock the House with Shelter", "difficulty": 4},
 {"name": "Win a Prize in Roulette", "difficulty": 5},
 {"name": "Draft a Room with an Active Stopwatch", "difficulty": 4},
@@ -82,9 +77,7 @@ var objectiveData = [
 {"name": "Lose 25+ Steps to Weight Room", "difficulty": 2},
 {"name": "Use 2 Wind Up Keys in a Day", "difficulty": 2},
 {"name": "Read a Red, Blue, and Green Memo in a Day", "difficulty": 4},
-{"name": "Ride the Boat", "difficulty": 4},
-{"name": "Eat a Cupcake", "difficulty": 4},
-{"name": "Dig Up Spread Dirt", "difficulty": 4},
+{"name": "Eat a Cupcake", "difficulty": 4}, // Ash objects
 {"name": "Enter Ballroom with 6+ Gems", "difficulty": 3},
 {"name": "Draft an Empty Aquarium", "difficulty": 3},
 {"name": "Draft 3 Dead Ends Adjacent to 1 Room", "difficulty": 3},
@@ -144,15 +137,18 @@ var objectiveData = [
 
 {"name": "Trigger Experiment 2x", "difficulty": 2, "group": "experiment"},
 {"name": "Trigger Experiment 4x", "difficulty": 3, "group": "experiment"},
+{"name": "Dig Up Spread Dirt", "difficulty": 4, "group": "experiment"}, // Ash objects
 
 {"name": "8+ Inventory Items", "difficulty": 2, "group": "inventory"},
 {"name": "10+ Inventory Items", "difficulty": 2, "group": "inventory"},
 {"name": "12+ Inventory Items", "difficulty": 3, "group": "inventory"},
+{"name": "14+ Inventory Items", "difficulty": 4, "group": "inventory"}, // added
 
 {"name": "Use 2 Upgrade Disks", "difficulty": 2, "group": "disks"},
 {"name": "Use 3 Upgrade Disks", "difficulty": 3, "group": "disks"},
 {"name": "Use 4 Upgrade Disks", "difficulty": 3, "group": "disks"},
 {"name": "Use 5 Upgrade Disks", "difficulty": 4, "group": "disks"},
+{"name": "Use 6 Upgrade Disks", "difficulty": 5, "group": "disks"}, // added
 
 {"name": "2 Safes in a Day", "difficulty": 1, "group": "safes"},
 {"name": "3 Safes in a Day", "difficulty": 2, "group": "safes"},
@@ -214,6 +210,7 @@ var objectiveData = [
 
 {"name": "View Fine Print", "difficulty": 2, "group": "magnifying_glass"},
 {"name": "View Stamp(s) in the Library", "difficulty": 3, "group": "magnifying_glass"},
+{"name": "View 2+ Stamps in the Library", "difficulty": 4, "group": "magnifying_glass"}, // added
 
 {"name": "Non-Outer Room Outside", "difficulty": 3, "group": "shrine_outer"},
 {"name": "Pick 3 Berries", "difficulty": 3, "group": "shrine_outer"},
@@ -224,6 +221,7 @@ var objectiveData = [
 {"name": "Pull Antechamber Lever", "difficulty": 2, "group": "levers"},
 {"name": "Pull 2 Unique Levers", "difficulty": 3, "group": "levers"},
 {"name": "Pull 3 Unique Levers", "difficulty": 4, "group": "levers"},
+{"name": "Pull a Backup Lever", "difficulty": 5, "group": "levers"}, // Weight Room, Throne Room, Secret Garden or Mechanarium
 
 // my grouped
 {"name": "3 Red Letters", "difficulty": 2, "group": "red_letters"},
@@ -231,10 +229,10 @@ var objectiveData = [
 {"name": "5 Red Letters", "difficulty": 4, "group": "red_letters"},
 {"name": "6 Red Letters", "difficulty": 5, "group": "red_letters"},
 
-{"name": "Have 2 Major Keys", "difficulty": 2, "group": "major_keys"},
-{"name": "Have 3 Major Keys", "difficulty": 3, "group": "major_keys"},
-{"name": "Have 4 Major Keys", "difficulty": 4, "group": "major_keys"},
-{"name": "Have 5 Major Keys", "difficulty": 5, "group": "major_keys"},
+{"name": "Have 2 Major Keys", "difficulty": 1, "group": "major_keys"},
+{"name": "Have 3 Major Keys", "difficulty": 2, "group": "major_keys"},
+{"name": "Have 4 Major Keys", "difficulty": 3, "group": "major_keys"},
+{"name": "Have 5 Major Keys", "difficulty": 4, "group": "major_keys"},
 
 {"name": "Make a Contraption", "difficulty": 3, "group": "contraptions"}, // moved here
 {"name": "2 Unique Contraptions", "difficulty": 4, "group": "contraptions"},
@@ -250,7 +248,8 @@ var objectiveData = [
 
 {"name": "Add Mechanarium", "difficulty": 4, "group": "mechanarium"}, // moved here
 {"name": "4 Door Mechanarium", "difficulty": 5, "group": "mechanarium"},
-{"name": "Open the North Antechamber Door", "difficulty": 5, "group": "mechanarium"},
+{"name": "Open the North Antechamber Door", "difficulty": 4, "group": "mechanarium"},
+{"name": "Add Treasure Trove", "difficulty": 6, "group": "mechanarium"},
 
 {"name": "Draft 2 Bishops", "difficulty": 3, "group": "chess"}, // Chapel, Attic, Bookshop, Rumpus
 {"name": "Draft 3 Bishops", "difficulty": 4, "group": "chess"}, 
@@ -265,4 +264,10 @@ var objectiveData = [
 {"name": "Read an Email from Each Terminal", "difficulty": 5, "group": "grotto"},
 {"name": "Draft Throne Room", "difficulty": 5, "group": "grotto"},
 {"name": "Remove a Crate from the Tunnel", "difficulty": 6, "group": "grotto"},
+
+{"name": "Unlock a Basement Door", "difficulty": 5, "group": "antechamber"},
+{"name": "Enter Antechamber", "difficulty": 4, "group": "antechamber"},
+
+{"name": "Reach Rank 9", "difficulty": 2, "group": "rank_9"},
+{"name": "Reach Rank 9 Without Drafting a Hallway", "difficulty": 3, "group": "rank_9"},
 ];
