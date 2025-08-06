@@ -31,7 +31,6 @@ var objectiveData = [
 {"name": "Collect Items Spread to Conference Room", "difficulty": 3},
 {"name": "Read a Library Book", "difficulty": 3}, // removed aloud
 {"name": "Buy a Special Key", "difficulty": 3},
-{"name": "End a Day with 90+ Steps Left", "difficulty": 3},
 {"name": "Open All Doors in Great Hall", "difficulty": 3},
 {"name": "Retrieve a Coin from Draining Water", "difficulty": 3},
 {"name": "Draft the Cloister for Free", "difficulty": 3},
@@ -51,11 +50,10 @@ var objectiveData = [
 {"name": "Operate a Powered Device", "difficulty": 3}, // Lab, Pump, Garage, Laundry, Furnace
 {"name": "Draft a Visible Room from Dark Room", "difficulty": 2},
 {"name": "Purchase a Book", "difficulty": 4},
-{"name": "Purchase a Book", "difficulty": 3},
 {"name": "Purchase an Item from the Showroom", "difficulty": 4},
 {"name": "Start a Day with 4+ Gems", "difficulty": 3},
 {"name": "Dig up Treasure", "difficulty": 4},
-{"name": "Obtain the Ruby Crown", "difficulty": 5},
+{"name": "Obtain the Paper Crown", "difficulty": 5},
 {"name": "Unfreeze a Key", "difficulty": 4},
 {"name": "Open 3+ chests in the Reservoir", "difficulty": 5},
 {"name": "Enter the Precipice from the Tomb", "difficulty": 5},
@@ -65,24 +63,25 @@ var objectiveData = [
 {"name": "Draw a Spoiled Room", "difficulty": 3},
 {"name": "Unlock the House with Shelter", "difficulty": 4},
 {"name": "Win a Prize in Roulette", "difficulty": 5},
-{"name": "Draft a Room with an Active Stopwatch", "difficulty": 4},
+{"name": "Draft a Room with an Active Stopwatch", "difficulty": 5},
 {"name": "Remove a Room from the Drafting Pool", "difficulty": 4},
 {"name": "Buy or Sell an Upgrade Disk", "difficulty": 3},
 {"name": "Upgrade the Planetarium", "difficulty": 4},
 {"name": "Draft 3 Interior Green Rooms", "difficulty": 4},
-{"name": "Donate to the Lost and Found", "difficulty": 4},
-{"name": "Consume 8+ Inventory Items in a Day", "difficulty": 4},
+{"name": "Donate to the Lost and Found", "difficulty": 5},
 {"name": "Refill an Empty Watering Can", "difficulty": 4},
-{"name": "Trigger an Experiment Ending your Day", "difficulty": 3},
+{"name": "Trigger an Experiment that Ends your Day", "difficulty": 3},
 {"name": "Lose 25+ Steps to Weight Room", "difficulty": 2},
 {"name": "Use 2 Wind Up Keys in a Day", "difficulty": 2},
-{"name": "Read a Red, Blue, and Green Memo in a Day", "difficulty": 4},
+{"name": "Read a Red, Blue, and Green Memo in a Day", "difficulty": 3},
 {"name": "Eat a Cupcake", "difficulty": 4}, // Ash objects
 {"name": "Enter Ballroom with 6+ Gems", "difficulty": 3},
-{"name": "Draft an Empty Aquarium", "difficulty": 3},
+{"name": "Enter an Empty Aquarium", "difficulty": 3},
 {"name": "Draft 3 Dead Ends Adjacent to 1 Room", "difficulty": 3},
 {"name": "Unlock a Door with the Kennel", "difficulty": 5},
 {"name": "Watch Security Footage", "difficulty": 1},
+{"name": "Trigger Dormitory Twice", "difficulty": 4},
+{"name": "Buy a Discounted Item", "difficulty": 2},
 
 
 //grouped squares (only one of each group can appear)
@@ -172,14 +171,15 @@ var objectiveData = [
 {"name": "End with 8+ Dead Ends", "difficulty": 1, "group": "dead_ends"},
 {"name": "End with 10+ Dead Ends", "difficulty": 2, "group": "dead_ends"},
 {"name": "End with 12+ Dead Ends", "difficulty": 3, "group": "dead_ends"},
-{"name": "End with 14+ Dead Ends", "difficulty": 4, "group": "dead_ends"},
-{"name": "End with 16+ Dead Ends", "difficulty": 5, "group": "dead_ends"},
+{"name": "End with 14+ Dead Ends", "difficulty": 4, "group": "dead_ends"}, // added 14-16
+{"name": "End with 15+ Dead Ends", "difficulty": 5, "group": "dead_ends"},
+{"name": "End with 16+ Dead Ends", "difficulty": 6, "group": "dead_ends"},
 
 {"name": "Draft 6 Red Rooms in a Day", "difficulty": 3, "group": "rooms"},
 {"name": "Draft 7 Bedrooms in a Day", "difficulty": 3, "group": "rooms"},
 {"name": "Draft 6 Green Rooms in a Day", "difficulty": 3, "group": "rooms"},
 {"name": "Draft 6 Hallways in a Day", "difficulty": 3, "group": "rooms"},
-{"name": "Draft 1 of Each Color Room in a Day", "difficulty": 2, "group": "rooms"},
+{"name": "Draft 1 of Each Color Room in a Day", "difficulty": 1, "group": "rooms"},
 {"name": "Draft 2 of Each Color Room in a Day", "difficulty": 3, "group": "rooms"},
 {"name": "Draft 3 of Each Color Room in a Day", "difficulty": 4, "group": "rooms"},
 
@@ -271,4 +271,7 @@ var objectiveData = [
 
 {"name": "Reach Rank 9", "difficulty": 2, "group": "rank_9"},
 {"name": "Reach Rank 9 Without Drafting a Hallway", "difficulty": 3, "group": "rank_9"},
+
+{"name": "End a Day with 90+ Steps Left", "difficulty": 3, "group": "end_steps"}, // moved here
+{"name": "End a Day with 100+ Steps Left", "difficulty": 4, "group": "end_steps"},
 ];
