@@ -246,6 +246,7 @@ var objectiveData = [
 {"name": "1 Sigil", "difficulty": 5, "group": "sanctum_keys"},
 {"name": "2 Sigils", "difficulty": 6, "group": "sanctum_keys"},
 
+{"name": "Ride the Boat", "difficulty": 4, "group": "mechanarium"},
 {"name": "Add Mechanarium", "difficulty": 4, "group": "mechanarium"}, // moved here
 {"name": "4 Door Mechanarium", "difficulty": 5, "group": "mechanarium"},
 {"name": "Open the North Antechamber Door", "difficulty": 4, "group": "mechanarium"},
