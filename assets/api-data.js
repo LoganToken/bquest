@@ -36,20 +36,16 @@ var objectiveData = [
 {"name": "Draft the Cloister for Free", "difficulty": 3},
 {"name": "Collect a Flower Gem", "difficulty": 3},
 {"name": "Cash a Payroll Check", "difficulty": 3},
-{"name": "End with 35+ Rooms", "difficulty": 3},
 
 // ungrouped very hard
-{"name": "Gain Chess Power", "difficulty": 5}, // difficulty 4 -> 5
 
 // ungrouped mine
 {"name": "Any Trophy", "difficulty": 6},
-{"name": "Read the Monk's Riddle", "difficulty": 6},
 {"name": "Room 46", "difficulty": 6},
 {"name": "Open a Filing Cabinet", "difficulty": 3},
 {"name": "Open a Vault Door", "difficulty": 5}, // Ash objects
 {"name": "Operate a Powered Device", "difficulty": 3}, // Lab, Pump, Garage, Laundry, Furnace
 {"name": "Draft a Visible Room from Dark Room", "difficulty": 2},
-{"name": "Purchase a Book", "difficulty": 4},
 {"name": "Purchase an Item from the Showroom", "difficulty": 4},
 {"name": "Start a Day with 4+ Gems", "difficulty": 3},
 {"name": "Dig up Treasure", "difficulty": 4},
@@ -62,7 +58,6 @@ var objectiveData = [
 {"name": "Draft 3 Tunnels in a row", "difficulty": 5},
 {"name": "Draw a Spoiled Room", "difficulty": 3},
 {"name": "Unlock the House with Shelter", "difficulty": 4},
-{"name": "Win a Prize in Roulette", "difficulty": 5},
 {"name": "Draft a Room with an Active Stopwatch", "difficulty": 5},
 {"name": "Remove a Room from the Drafting Pool", "difficulty": 4},
 {"name": "Buy or Sell an Upgrade Disk", "difficulty": 3},
@@ -78,10 +73,10 @@ var objectiveData = [
 {"name": "Enter Ballroom with 6+ Gems", "difficulty": 3},
 {"name": "Enter an Empty Aquarium", "difficulty": 3},
 {"name": "Draft 3 Dead Ends Adjacent to 1 Room", "difficulty": 3},
-{"name": "Unlock a Door with the Kennel", "difficulty": 5},
 {"name": "Watch Security Footage", "difficulty": 1},
-{"name": "Trigger Dormitory Twice", "difficulty": 4},
 {"name": "Buy a Discounted Item", "difficulty": 2},
+{"name": "Crown, Sceptre, or Cursed Idol", "difficulty": 7},
+{"name": "Gain 41+ Coins From a Single Room", "difficulty": 4},
 
 
 //grouped squares (only one of each group can appear)
@@ -91,9 +86,12 @@ var objectiveData = [
 {"name": "Buy Out Any Shop", "difficulty": 2, "group": "buyout"},
 {"name": "Buy Out Kitchen", "difficulty": 2, "group": "buyout"},
 {"name": "Buy Out Commissary", "difficulty": 3, "group": "buyout"},
+{"name": "Buy Out Showroom", "difficulty": 8, "group": "buyout"},
 
 {"name": "30+ Coins", "difficulty": 2, "group": "coins"},
 {"name": "40+ Coins", "difficulty": 3, "group": "coins"},
+{"name": "50+ Coins", "difficulty": 4, "group": "coins"},
+{"name": "80+ Coins", "difficulty": 5, "group": "coins"},
 
 {"name": "10+ Gems", "difficulty": 2, "group": "gems"},
 {"name": "15+ Gems", "difficulty": 3, "group": "gems"},
@@ -120,6 +118,7 @@ var objectiveData = [
 {"name": "9+ Allowance", "difficulty": 4, "group": "allowance"},
 {"name": "10+ Allowance", "difficulty": 5, "group": "allowance"},
 {"name": "11+ Allowance", "difficulty": 5, "group": "allowance"},
+{"name": "12+ Allowance", "difficulty": 5, "group": "allowance"},
 
 {"name": "5+ Stars", "difficulty": 2, "group": "stars"},
 {"name": "10+ Stars", "difficulty": 3, "group": "stars"},
@@ -197,16 +196,21 @@ var objectiveData = [
 {"name": "Add 2 New Floorplans", "difficulty": 1, "group": "new_plan"},
 {"name": "Add 3 New Floorplans", "difficulty": 3, "group": "new_plan"},
 {"name": "Add 4 New Floorplans", "difficulty": 4, "group": "new_plan"},
+{"name": "Add 5 New Floorplans", "difficulty": 5, "group": "new_plan"},
+{"name": "Add 6 New Floorplans", "difficulty": 5, "group": "new_plan"},
 
 {"name": "Attend Grade 3", "difficulty": 2, "group": "classroom"},
 {"name": "Attend Grade 4", "difficulty": 3, "group": "classroom"},
 {"name": "Attend Grade 5", "difficulty": 4, "group": "classroom"},
+{"name": "Attend Grade 6", "difficulty": 5, "group": "classroom"},
+{"name": "Attend Grade 7", "difficulty": 6, "group": "classroom"},
 
 {"name": "Become Cursed", "difficulty": 2, "group": "shrine"},
 {"name": "Rotate a Room", "difficulty": 2, "group": "shrine"},
 
 {"name": "Dig 10x in a Day", "difficulty": 2, "group": "dig"},
 {"name": "Dig 15x in a Day", "difficulty": 3, "group": "dig"},
+{"name": "Dig 20x in a Day", "difficulty": 4, "group": "dig"},
 
 {"name": "View Fine Print", "difficulty": 2, "group": "magnifying_glass"},
 {"name": "View Stamp(s) in the Library", "difficulty": 3, "group": "magnifying_glass"},
@@ -214,6 +218,7 @@ var objectiveData = [
 
 {"name": "Non-Outer Room Outside", "difficulty": 3, "group": "shrine_outer"},
 {"name": "Pick 3 Berries", "difficulty": 3, "group": "shrine_outer"},
+{"name": "Read the Monk's Riddle", "difficulty": 5, "group": "shrine_outer"},
 
 {"name": "Use an Elevator", "difficulty": 2, "group": "flames"},
 {"name": "Light 4 Blue Flames", "difficulty": 2, "group": "flames"},
@@ -221,6 +226,7 @@ var objectiveData = [
 {"name": "Pull Antechamber Lever", "difficulty": 2, "group": "levers"},
 {"name": "Pull 2 Unique Levers", "difficulty": 3, "group": "levers"},
 {"name": "Pull 3 Unique Levers", "difficulty": 4, "group": "levers"},
+{"name": "Pull 4 Unique Levers", "difficulty": 5, "group": "levers"},
 {"name": "Pull a Backup Lever", "difficulty": 5, "group": "levers"}, // Weight Room, Throne Room, Secret Garden or Mechanarium
 
 // my grouped
@@ -252,12 +258,12 @@ var objectiveData = [
 {"name": "Open the North Antechamber Door", "difficulty": 4, "group": "mechanarium"},
 {"name": "Add Treasure Trove", "difficulty": 6, "group": "mechanarium"},
 
-{"name": "Draft 2 Bishops", "difficulty": 3, "group": "chess"}, // Chapel, Attic, Bookshop, Rumpus
-{"name": "Draft 3 Bishops", "difficulty": 4, "group": "chess"}, 
-{"name": "Draft 2 Knights", "difficulty": 2, "group": "chess"}, // Observatory, Security, Armory, Treasure
-{"name": "Draft 3 Knights", "difficulty": 6, "group": "chess"},
-{"name": "Draft 2 Rooks", "difficulty": 3, "group": "chess"}, // Nook, Vault, Conservatory, Clock
-{"name": "Draft 3 Rooks", "difficulty": 5, "group": "chess"},
+{"name": "Draft 2 Bishops", "difficulty": 3, "group": "chess_piece"}, // Chapel, Attic, Bookshop, Rumpus
+{"name": "Draft 3 Bishops", "difficulty": 4, "group": "chess_piece"}, 
+{"name": "Draft 2 Knights", "difficulty": 2, "group": "chess_piece"}, // Observatory, Security, Armory, Treasure
+{"name": "Draft 3 Knights", "difficulty": 6, "group": "chess_piece"},
+{"name": "Draft 2 Rooks", "difficulty": 3, "group": "chess_piece"}, // Nook, Vault, Conservatory, Clock
+{"name": "Draft 3 Rooks", "difficulty": 5, "group": "chess_piece"},
 
 {"name": "Draft a Room in Each Corner", "difficulty": 4, "group": "corners"},
 {"name": "Draft a Dead End in Each Corner", "difficulty": 5, "group": "corners"},
@@ -274,4 +280,23 @@ var objectiveData = [
 
 {"name": "End a Day with 90+ Steps Left", "difficulty": 3, "group": "end_steps"}, // moved here
 {"name": "End a Day with 100+ Steps Left", "difficulty": 4, "group": "end_steps"},
+
+{"name": "Win a Prize in Roulette", "difficulty": 5, "group": "drafting"},
+{"name": "Unlock a Door with the Kennel", "difficulty": 4, "group": "drafting"},
+{"name": "Trigger Dormitory Twice", "difficulty": 4, "group": "drafting"},
+
+{"name": "Gain Chess Power", "difficulty": 5, "group": "chess_power"}, // difficulty 4 -> 5
+{"name": "Castle", "difficulty": 6, "group": "chess_power"},
+{"name": "Purchase an Item From the Armory", "difficulty": 6, "group": "chess_power"},
+
+{"name": "Trigger an End-of-Day Bedroom Effect", "difficulty": 2, "group": "end_in_bedroom"}, // Master, HLC, Servants, Bunk
+{"name": "2 Different End-of-Day Bedroom Effects", "difficulty": 3, "group": "end_in_bedroom"},
+{"name": "3 Different End-of-Day Bedroom Effects", "difficulty": 4, "group": "end_in_bedroom"},
+{"name": "4 Different End-of-Day Bedroom Effects", "difficulty": 5, "group": "end_in_bedroom"},
+
+{"name": "Purchase a Book", "difficulty": 4, "group": "bookshop"},
+{"name": "Read a Purchased Book", "difficulty": 4, "group": "bookshop"},
+
+{"name": "End with 35+ Rooms", "difficulty": 3, "group": "full_house"},
+{"name": "End with 40+ Rooms", "difficulty": 4, "group": "full_house"},
 ];
